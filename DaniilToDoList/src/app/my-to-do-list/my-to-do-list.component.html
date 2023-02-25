@@ -1,0 +1,65 @@
+<mat-card class="row">
+    <mat-card-header>
+    <h1>To Do List</h1>
+    </mat-card-header>
+    <mat-card-content cdkDropListGroup>
+
+    <mat-card class="col-sm-3 example-list" 
+    cdkDropList
+    [cdkDropListData]="todo"
+    (cdkDropListDropped)="drop($event)">
+        <mat-card-header>
+        <h3>To Do</h3>   
+        </mat-card-header>
+        <mat-card-content>
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>
+            {{item}}
+        </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="col-sm-3 example-list"
+    cdkDropList
+    [cdkDropListData]="inprogress"
+    (cdkDropListDropped)="drop($event)">
+        <mat-card-header>
+        <h3>In Progress</h3>
+        </mat-card-header>
+        <mat-card-content>
+        <div class="example-box" *ngFor="let item of inprogress" cdkDrag>
+            {{item}}
+        </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="col-sm-3 example-list"
+    cdkDropList
+    [cdkDropListData]="beapproved"
+    (cdkDropListDropped)="drop($event)">
+        <mat-card-header>
+        <h3>To Be Approved</h3>
+        </mat-card-header>
+        <mat-card-content>
+        <div class="example-box" *ngFor="let item of beapproved" cdkDrag>
+            {{item}}
+        </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="col-sm-3 example-list"       
+    cdkDropList
+    [cdkDropListData]="done"
+    (cdkDropListDropped)="drop($event)">
+        <mat-card-header>
+        <h3>Done</h3>      
+        </mat-card-header>
+        <mat-card-content>
+        <div class="example-box" *ngFor="let item of done" cdkDrag>
+            {{item}}
+        </div>
+        
+        </mat-card-content>
+    </mat-card>
+
+    </mat-card-content>
+</mat-card>
