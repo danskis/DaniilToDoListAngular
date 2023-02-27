@@ -1,0 +1,11 @@
+.my-task{
+    width: 100%;
+}
+
+.my-button{
+    height: 30px;
+}
+
+::ng-deep mat-icon{
+    margin: -5px;
+}

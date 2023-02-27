@@ -1,0 +1,13 @@
+<mat-card class="container my-task">
+    <div>
+        <h4>Task Name:</h4> 
+        <p>- {{task.name}} -</p>
+        <h4>Task Estimation: </h4>
+        <p>- {{task.estimation}} -</p>
+        <h4><span>Eliminate </span>
+            <button class="btn btn-danger my-button" (click)="deleteTask()">
+                <mat-icon>delete</mat-icon>                
+            </button> 
+        </h4>
+    </div>
+</mat-card>

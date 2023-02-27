@@ -11,13 +11,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MyToDoListComponent } from './my-to-do-list/my-to-do-list.component';
+import { MyTaskComponent } from './my-to-do-list/my-task/my-task.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyToDoListComponent
+    MyToDoListComponent,
+    MyTaskComponent
   ],
   imports: [
     BrowserModule,

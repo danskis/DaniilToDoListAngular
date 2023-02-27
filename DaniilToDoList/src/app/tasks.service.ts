@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 
 export interface TaskContent{
     name: string,
@@ -12,5 +13,11 @@ export class TasksService{
     inprogress : TaskContent[] = [];
     done : TaskContent[] = [];
     beapproved : TaskContent[] = [];
+
+    taskEliminated = new Subject();
+
+    eliminateTask(task: TaskContent){
+        this.taskEliminated.next(task);
+    }
 
 }
