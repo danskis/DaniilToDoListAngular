@@ -14,7 +14,7 @@ export class TasksService{
     done : TaskContent[] = [];
     beapproved : TaskContent[] = [];
 
-    taskEliminated = new Subject();
+    taskEliminated = new Subject<TaskContent>();
 
     eliminateTask(task: TaskContent){
         this.taskEliminated.next(task);
